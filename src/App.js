@@ -218,13 +218,15 @@ function App() {
 						Connect wallet
 					</button>
 				)}
-				<button
-					className="h-10 px-6 font-semibold rounded-md bg-indigo-500 text-white"
-					onClick={wave}
-					disabled={loading}
-				>
-					Wave 👋
-				</button>
+				{currentAccount && (
+					<button
+						className="h-10 px-6 font-semibold rounded-md bg-indigo-500 text-white"
+						onClick={wave}
+						disabled={loading}
+					>
+						Wave 👋
+					</button>
+				)}
 			</div>
 			{waves
 				?.map((wave, index) => (
